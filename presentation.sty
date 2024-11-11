@@ -1,0 +1,22 @@
+% mystyle.sty - カスタムスタイルファイル
+
+\ProvidesPackage{presentation}
+\mode<presentation>{
+    \usetheme{Madrid}      % Beamerのテーマ（例：Madridテーマ）
+    \usecolortheme{dolphin} % カラーテーマ
+}
+
+% フォント設定例
+\setbeamerfont{title}{size=\LARGE, series=\bfseries}
+\setbeamerfont{frametitle}{size=\Large, series=\bfseries}
+
+% 箇条書きデザイン
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{enumerate items}[square]
+
+% ロゴやフッターのカスタマイズ
+\setbeamertemplate{footline}{%
+    \hfill\insertframenumber/\inserttotalframenumber\hspace{1cm} % フレーム番号
+}
+
+% 他のカスタマイズがあれば追加
