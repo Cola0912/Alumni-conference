@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.10.7)  11 NOV 2024 18:48
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.10.7)  11 NOV 2024 18:54
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1310,11 +1310,11 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of LuaTeX's memory you used:
  24354 strings out of 477805
  125244,794899 words of node,token memory allocated
- 36769 words of node memory still in use:
+ 36754 words of node memory still in use:
    41 hlist, 9 vlist, 58 rule, 6 local_par, 6 math, 121 glue, 328 kern, 31 penal
-ty, 58 glyph, 14382 attribute, 383 glue_spec, 748 attribute_list, 4 write, 96 us
+ty, 58 glyph, 14382 attribute, 380 glue_spec, 748 attribute_list, 4 write, 96 us
 er_defined, 24 pdf_colorstack nodes
-   avail lists: 1:29,2:11206,3:307,4:481,5:94,6:42,7:746,8:73,9:462,10:32,11:4
+   avail lists: 1:29,2:10228,3:307,4:481,5:94,6:42,7:668,8:73,9:444,10:32,11:4
  43693 multiletter control sequences out of 65536+600000
  57 fonts using 37857263 bytes
  128i,14n,115p,1803b,747s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1323,7 +1323,7 @@ er_defined, 24 pdf_colorstack nodes
 nts/opentype/public/haranoaji/HaranoAjiMincho-Regular.otf></usr/share/texlive/te
 xmf-dist/fonts/opentype/public/haranoaji/HaranoAjiGothic-Medium.otf></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (7 pages, 67620 bytes).
+Output written on main.pdf (7 pages, 64717 bytes).
 
 PDF statistics: 234 PDF objects out of 1000 (max. 8388607)
  203 compressed objects within 3 object streams
