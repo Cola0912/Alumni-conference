@@ -1,7 +1,7 @@
 TEXFILE=main
 PDF=$(TEXFILE).pdf
 
-all: $(PDF)
+all: $(PDF) clean  # ビルド後に自動的にcleanを実行
 
 $(PDF): $(TEXFILE).tex
 	lualatex $(TEXFILE).tex || exit 1
