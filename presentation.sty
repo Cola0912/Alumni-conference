@@ -1,22 +1,57 @@
-% mystyle.sty - カスタムスタイルファイル
+% presentation.sty - カスタムスタイルファイル
 
 \ProvidesPackage{presentation}
+\usepackage{luatexja} % 日本語対応
+\usepackage{xcolor}
+
+% テーマ設定
 \mode<presentation>{
-    \usetheme{Madrid}      % Beamerのテーマ（例：Madridテーマ）
+    \usetheme{Madrid}      % テーマ
     \usecolortheme{dolphin} % カラーテーマ
 }
 
-% フォント設定例
-\setbeamerfont{title}{size=\LARGE, series=\bfseries}
-\setbeamerfont{frametitle}{size=\Large, series=\bfseries}
+% ページ番号設定
+\setbeamertemplate{footline}{
+    \hfill\insertframenumber/\inserttotalframenumber\hspace{1cm}
+}
+\setbeamertemplate{title page}{ % 表紙にはページ番号を表示しない
+    \vbox{}
+    \vfill
+    \centering
+    {\usebeamerfont{title}\inserttitle\par}
+    \vskip0.5em
+    {\usebeamerfont{author}\insertauthor\par}
+    \vskip1em
+    {\usebeamerfont{date}\insertdate\par}
+    \vfill
+}
 
-% 箇条書きデザイン
+% フォントサイズ設定
+\setbeamerfont{title}{size=\Huge} % タイトルは32ポイント以上
+\setbeamerfont{frametitle}{size=\Large} % フレームタイトルは28ポイント以上
+\setbeamerfont{itemize/enumerate body}{size=\large} % 箇条書きの上位レベル28ポイント
+\setbeamerfont{itemize/enumerate subbody}{size=\normalsize} % 下位レベル24ポイント
+\setbeamerfont{block body}{size=\Large} % 四角囲みのテキストを大きく
+
+% 箇条書きスタイル設定
 \setbeamertemplate{itemize items}[circle]
 \setbeamertemplate{enumerate items}[square]
 
-% ロゴやフッターのカスタマイズ
-\setbeamertemplate{footline}{%
-    \hfill\insertframenumber/\inserttotalframenumber\hspace{1cm} % フレーム番号
-}
+% 図表のフォントサイズ
+\newcommand{\figfontsize}{\fontsize{20pt}{20pt}\selectfont}
 
-% 他のカスタマイズがあれば追加
+% 引用用コマンド
+\newcommand{\citecustom}[2]{[#1 #2]} % [著者 西暦年]形式で引用
+
+% 箇条書きの書き方ガイド
+\newcommand{\topdownitem}[1]{\item #1} % トップダウン形式の箇条書き
+
+% 四角囲みで強調表示
+\setbeamertemplate{block}{rounded shadow=true, title=\textbf{要点}}
+
+% その他の要点ブロックテンプレート
+\newenvironment{keypointblock}[1]{
+    \begin{block}{\textbf{#1}}
+}{
+    \end{block}
+}
